@@ -1,12 +1,27 @@
-# bst260project-template
+# finalproject
 
-Instructions and template for projects for 2026 HSPH BST260
+Jialing Yuan's final project for BST 260, Fall 2026.
 
-Your project will be a working GitHub pages site that presents your interpretation
-of features of public health datasets.
+This R package contains public health datasets and their documentation.
+The project website is at <https://jialingyuan02.github.io/finalproject/>.
 
-Please see [instructions](https://vjcitn.github.io/bst260project-template/articles/instructions.html) to set up the infrastructure for your project and to learn about available datasets
+## Installation
 
-Please see [project suggestion text](https://vjcitn.github.io/bst260project-template/articles/stubs.html) for
-some suggestions of how you might proceed with project work on selected datasets.  More content will be
-added to this page in the near future.
+```r
+devtools::install_github("JialingYuan02/finalproject")
+```
+
+## Data
+
+The package includes `waterborne`, `cdcmurd`, `cdcfiremort`, and `gunleg`.
+Their help pages document the original data sources.
+
+```r
+data("waterborne", package="finalproject")
+waterborne[[1]]
+```
+
+This project is based on Vincent Carey's
+[BST 260 project template](https://github.com/vjcitn/bst260project-template).
+The original [course instructions](articles/instructions.html) and
+[project suggestions](articles/stubs.html) are included for reference.

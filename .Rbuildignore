@@ -1,0 +1,7 @@
+^docs$
+^_pkgdown\.yml$
+^\.gitignore$
+^\.DS_Store$
+^vignettes/\.quarto$
+^vignettes/.*_files$
+^LICENSE\.md$
