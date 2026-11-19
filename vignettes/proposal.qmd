@@ -1,0 +1,42 @@
+---
+title: "Final Project Proposal: Two Studies Using Public Health Data"
+author: "Jialing Yuan"
+date: 2026-11-18
+---
+
+**To: BST260 Teaching Team, Fall 2026**
+
+## Final Project 
+
+For my final project, I plan to complete two independent analyses. The first will examine whether the association between BMI and systolic blood pressure differs by sex and whether a linear model adequately describes this relationship. The second will compare the sizes of reported drinking-water and recreational-water outbreaks after accounting for etiology and year.
+
+## Study 1: BMI and systolic blood pressure in adults aged 40 and older
+
+### Research question
+
+Among adults aged 40 and older, does the association between BMI and systolic blood pressure differ by sex, and is a linear model adequate?
+
+### Motivation
+BMI and systolic blood pressure describe different aspects of cardiovascular health. Two people with the same BMI may have different blood pressure levels, and the association between BMI and blood pressure may differ between men and women. I want to examine whether this association differs by sex among adults aged 40 and older, whether blood pressure increases steadily across the BMI range, and how these patterns change after accounting for age and race/ethnicity.
+
+### Data source and study population
+
+I will use `NHANESraw` from the `NHANES` R package. The unit of analysis will be one participant aged 40 or older.
+
+The package contains a resampled teaching dataset, `NHANES`, as well as `NHANESraw`. I will use the raw version because it retains one record per participant and includes examination weights, strata, and primary sampling units.
+
+## Study 2: Water source and reported outbreak size
+
+### Research question
+
+Among reported waterborne outbreaks, how does outbreak size differ between drinking-water and recreational-water outbreaks after accounting for etiology and year?
+
+### Motivation
+
+The number of outbreaks and the number of people affected describe different aspects of public health burden. A water-source category could have many small outbreaks or fewer large ones. I want to compare the number of illnesses per reported outbreak and examine how much the comparison changes after accounting for the mix of etiologies and calendar years.
+
+### Data source and study population
+
+I will use `waterborne` dataset. Its documented source is the CDC outbreak data endpoint. The stored snapshot includes several transmission modes, so I will first restrict to records with `primary_mode == "Water"` and years 2009--2023. The unit of analysis will be one reported outbreak.
+
+The CDC National Outbreak Reporting System collects reports from public health agencies, including outbreak location, timing, etiology, and numbers of illnesses. The analysis therefore concerns reported outbreaks rather than every waterborne illness in the population.
